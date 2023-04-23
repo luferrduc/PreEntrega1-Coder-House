@@ -59,7 +59,6 @@ function valorPorCiudad(){
         
     }
 
-    // console.log(ciudad, valorCiduad)
     return {ciudad, valorCiudad}
 
 
@@ -80,14 +79,14 @@ function valorPorCiudad(){
 // - Hotel Nikko Nara = 60.772
 
 function valorPorHotel(ciudad){
-    // let opcionValida = false;
+
     let hotel;
     let valorHotel;
     if(ciudad == "Osaka"){
         hotel = prompt(`Elija el hotel en donde quiere hospedarse. Por favor, ingrese el número corresponiente hotel:   
          1. Sotetsu Fresa Inn Osaka Namba: $65.748
          2. Nest Hotel Osaka Umeda: $58.569`)
-        // console.log(hotel)
+
         while(hotel != "1" && hotel!= "2" && hotel == null){
             alert("Debe inrgesar un número de hotel válido")
             hotel = prompt(`Elija el hotel en donde quiere hospedarse. Por favor, ingrese el número corresponiente hotel:   
@@ -230,7 +229,6 @@ function reservarHotel(){
                 const valorPersona = valorCantidadPersonas()
                 const valorTotal = calcularTotal(valorPersona, valorCiudad, valorHotel)
                 const valorFinal = calcularTotalIVA(valorTotal, IVA)
-                console.log(valorFinal)
                 alert(`Reserva lograda con éxito.
                 Usted ha reservado una habitación en el Hotel ${hotel} de la ciudad de ${ciudad}, por un total de $${Math.round(valorFinal)}`)
                 break;
